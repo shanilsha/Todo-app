@@ -43,7 +43,15 @@ function App() {
             
           </div>
           <div className="right">
-            <i className="fas fa-times"></i>
+              <i onClick={(e)=>{
+                setTodos(toDos.filter(obj2 => {
+                  let temp;
+                  if (obj2.id != obj.id){
+                    temp = obj2
+                  }
+                  return temp;
+                }));
+              }} className="fas fa-times"></i>
           </div>
         </div>
 
